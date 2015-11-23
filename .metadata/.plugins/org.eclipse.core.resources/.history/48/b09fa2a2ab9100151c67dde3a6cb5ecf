@@ -1,0 +1,24 @@
+package skyler.tao.pdf2xml;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.PdfStamper;
+
+public class GetMetadataPdf {
+	
+	public static void main(String[] args) throws IOException {
+		PdfReader reader = new PdfReader("pdf_metadata.pdf");
+//		PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(dest));
+		Map<String, String> info = reader.getInfo();
+		
+		for (Entry<String, String> entry : info.entrySet()) {  
+			  
+		    System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());  
+		  
+		}  
+	}
+}

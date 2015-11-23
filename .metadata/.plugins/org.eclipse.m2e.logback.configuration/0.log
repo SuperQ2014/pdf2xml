@@ -160,3 +160,40 @@
 2015-11-22 13:19:01,119 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
 2015-11-22 13:19:01,119 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-11-22 13:19:01,119 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 10:02:49,470 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact com.lowagie:itext:jar:4.2.1 has been relocated to com.itextpdf:itextpdf:jar:5.5.6
+2015-11-23 14:16:30,355 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:16:30,359 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:16:30,361 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:16:30,361 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:16:46,402 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:16:46,403 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:16:46,404 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:16:46,404 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:22:20,210 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:22:20,210 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:22:20,211 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:22:20,212 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:30:06,075 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:30:06,075 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:30:06,076 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:30:06,077 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:32:51,636 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:32:51,636 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:32:51,637 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:32:51,637 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:42:01,807 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:42:01,807 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:42:01,808 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:42:01,808 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:47:36,487 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:47:36,487 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:47:36,498 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:47:36,498 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:47:49,870 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:47:49,870 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:47:49,872 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:47:49,872 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
+2015-11-23 14:48:11,405 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:48:11,405 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\main\resources
+2015-11-23 14:48:11,406 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-23 14:48:11,406 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\pdf2xml\pdf2xml\src\test\resources
