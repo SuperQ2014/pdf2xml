@@ -1,0 +1,30 @@
+package skyler.tao.pdf2xml;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import com.itextpdf.awt.geom.Rectangle;
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.parser.PdfTextExtractor;
+import com.itextpdf.text.pdf.parser.RegionTextRenderFilter;
+import com.itextpdf.text.pdf.parser.RenderFilter;
+
+public class GetfontPdf {
+
+	public static void main(String[] args) throws IOException {
+	    String src = "test.pdf";
+
+	    PdfReader reader = new PdfReader(src);
+
+	    SemTextExtractionStrategy semTextExtractionStrategy = new SemTextExtractionStrategy();
+
+	    Rectangle rect = new Rectangle(70, 80, 490, 580);
+	    RenderFilter filter = new RegionTextRenderFilter(rect);
+
+	    for (int i = 1; i <= reader.getNumberOfPages(); i++) {
+	        // strategy = new FilteredTextRenderListener(new LocationTextExtractionStrategy(), filter);
+	        System.out.println(PdfTextExtractor.getTextFromPage(reader, i, semTextExtractionStrategy));
+	    }
+	}
+}

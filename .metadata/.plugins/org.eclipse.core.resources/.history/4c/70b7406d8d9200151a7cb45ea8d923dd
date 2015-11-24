@@ -1,0 +1,23 @@
+package skyler.tao.pdf2xml;
+
+public class GetfontPdf {
+
+	public static void main(String[] args) throws IOException {
+	    String src = "SEM_081145.pdf";
+
+	    PdfReader reader = new PdfReader(src);
+
+	    SemTextExtractionStrategy semTextExtractionStrategy = new SemTextExtractionStrategy();
+
+	    PrintWriter out = new PrintWriter(new FileOutputStream(src + ".txt"));
+	    Rectangle rect = new Rectangle(70, 80, 490, 580);
+	    RenderFilter filter = new RegionTextRenderFilter(rect);
+
+	    for (int i = 1; i <= reader.getNumberOfPages(); i++) {
+	        // strategy = new FilteredTextRenderListener(new LocationTextExtractionStrategy(), filter);
+	        out.println(PdfTextExtractor.getTextFromPage(reader, i, semTextExtractionStrategy));
+	    }
+	    out.flush();
+	    out.close();
+	}
+}

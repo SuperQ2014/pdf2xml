@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfStamper"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfReader"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="com.itextpdf.awt.geom.Rectangle"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.parser.RegionTextRenderFilter"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.parser.RenderFilter"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.parser.PdfTextExtractor"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.parser.TextExtractionStrategy"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.parser.Vector"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Rectangle"/>
+</qualifiedTypeNameHistroy>

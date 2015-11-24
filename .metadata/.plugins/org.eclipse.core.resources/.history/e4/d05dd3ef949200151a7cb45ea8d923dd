@@ -1,0 +1,98 @@
+package skyler.tao.pdf2xml;
+
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.parser.ImageRenderInfo;
+import com.itextpdf.text.pdf.parser.TextExtractionStrategy;
+import com.itextpdf.text.pdf.parser.TextRenderInfo;
+import com.itextpdf.text.pdf.parser.Vector;
+
+public class SemTextExtractionStrategy implements TextExtractionStrategy {
+
+	private StringBuilder result = new StringBuilder();
+	private String text;
+	private Vector lastBaseLine;
+	private String lastFont;
+	private float lastFontSize;
+
+	private enum TextRenderMode {
+		FillText, StrokeText, FillThenStrokeText, Invisible, FillTextAndAddToPathForClipping, StrokeTextAndAddToPathForClipping, FillThenStrokeTextAndAddToPathForClipping, AddTextToPaddForClipping
+	}
+
+	public void beginTextBlock() {
+	}
+
+	@Override
+	public void renderText(TextRenderInfo renderInfo) {
+
+		String curFont = renderInfo.getFont().getPostscriptFontName();
+		// Check if faux bold is used
+		if ((renderInfo.getTextRenderMode() == TextRenderMode.FillThenStrokeText)) {
+			curFont += "-Bold";
+		}
+
+		// This code assumes that if the baseline changes then we're on a
+		// newline
+		Vector curBaseline = renderInfo.getBaseline().getStartPoint();
+		Vector topRight = renderInfo.getAscentLine().getEndPoint();
+		Rectangle rect = new Rectangle(curBaseline[Vector.I1],
+				curBaseline[Vector.I2], topRight[Vector.I1],
+				topRight[Vector.I2]);
+		Single curFontSize = rect.Height;
+
+		// See if something has changed, either the baseline, the font or the
+		// font size
+		if ((this.lastBaseLine == null)
+				|| (curBaseline[Vector.I2] != lastBaseLine[Vector.I2])
+				|| (curFontSize != lastFontSize) || (curFont != lastFont)) {
+			// if we've put down at least one span tag close it
+			if ((this.lastBaseLine != null)) {
+				this.result.append("</span>");
+			}
+			// If the baseline has changed then insert a line break
+			if ((this.lastBaseLine != null)
+					&& curBaseline[Vector.I2] != lastBaseLine[Vector.I2]) {
+				this.result.append("<br />");
+			}
+			// Create an HTML tag with appropriate styles
+			this.result.AppendFormat(
+					"<span style=\"font-family:{0};font-size:{1}\">", curFont,
+					curFontSize);
+		}
+
+		// Append the current text
+		this.result.append(renderInfo.getText());
+
+		// Set currently used properties
+		this.lastBaseLine = curBaseline;
+		this.lastFontSize = curFontSize;
+		this.lastFont = curFont;
+		text = renderInfo.getText();
+
+		System.out.println(renderInfo.getFont().getFontType());
+
+		System.out.print(text);
+	}
+
+	public void endTextBlock() {
+	}
+
+//	public void renderImage(ImageRenderInfo renderInfo) {
+//	}
+
+	public String getResultantText() {
+		if (result.length() > 0) {
+			result.append("</span>");
+		}
+		return result.toString();
+	}
+
+	public void renderImage(ImageRenderInfo arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void renderText(TextRenderInfo arg0) {
+		// TODO Auto-generated method stub
+
+	}
+}

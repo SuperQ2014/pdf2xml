@@ -1,0 +1,41 @@
+package skyler.tao.pdf2xml;
+
+import com.itextpdf.text.pdf.parser.ImageRenderInfo;
+import com.itextpdf.text.pdf.parser.TextExtractionStrategy;
+import com.itextpdf.text.pdf.parser.TextRenderInfo;
+
+public class SemTextExtractionStrategy implements TextExtractionStrategy {
+
+	private String text;
+
+	public void beginTextBlock() {
+	}
+
+	public void renderText(TextRenderInfo renderInfo) {
+		text = renderInfo.getText();
+
+		System.out.println(renderInfo.getFont().getFontType());
+
+		System.out.print(text);
+	}
+
+	public void endTextBlock() {
+	}
+
+	public void renderImage1(ImageRenderInfo renderInfo) {
+	}
+
+	public String getResultantText() {
+		return text;
+	}
+
+	public void renderImage(ImageRenderInfo arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void renderText(TextRenderInfo arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}
