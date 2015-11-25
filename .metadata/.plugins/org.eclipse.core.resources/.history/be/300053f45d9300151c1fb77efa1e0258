@@ -19,7 +19,7 @@ public class GetfontPdf {
 
 	    SemTextExtractionStrategy semTextExtractionStrategy = new SemTextExtractionStrategy();
 
-	    Rectangle rect = new Rectangle(800, 600);
+	    Rectangle rect = new Rectangle(490, 580);
 	    RenderFilter filter = new RegionTextRenderFilter(rect);
 
 	    for (int i = 1; i <= reader.getNumberOfPages(); i++) {

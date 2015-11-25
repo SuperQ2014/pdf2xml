@@ -15,22 +15,7 @@ public class SemTextExtractionStrategy implements TextExtractionStrategy {
 	private float lastFontSize;
 
 	private enum TextRenderMode {
-		FillText(1), 
-		StrokeText(2), 
-		FillThenStrokeText(3), 
-		Invisible(4), 
-		FillTextAndAddToPathForClipping(5), 
-		StrokeTextAndAddToPathForClipping(6), 
-		FillThenStrokeTextAndAddToPathForClipping(7), 
-		AddTextToPaddForClipping(8);
-		
-		private final int value;
-		private TextRenderMode(int value) {
-			this.value = value;
-		}
-		public int getValue() {
-			return value;
-		}
+		FillText, StrokeText, FillThenStrokeText, Invisible, FillTextAndAddToPathForClipping, StrokeTextAndAddToPathForClipping, FillThenStrokeTextAndAddToPathForClipping, AddTextToPaddForClipping
 	}
 
 	public void beginTextBlock() {
@@ -40,7 +25,7 @@ public class SemTextExtractionStrategy implements TextExtractionStrategy {
 
 		String curFont = renderInfo.getFont().getPostscriptFontName();
 		// Check if faux bold is used
-		if ((renderInfo.getTextRenderMode() == TextRenderMode.FillThenStrokeText.getValue())) {
+		if ((renderInfo.getTextRenderMode() == 2)) {
 			curFont += "-Bold";
 		}
 

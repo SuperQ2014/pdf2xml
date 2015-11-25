@@ -24,7 +24,7 @@ public class SemTextExtractionStrategy implements TextExtractionStrategy {
 		FillThenStrokeTextAndAddToPathForClipping(7), 
 		AddTextToPaddForClipping(8);
 		
-		private final int value;
+		private int value;
 		private TextRenderMode(int value) {
 			this.value = value;
 		}
