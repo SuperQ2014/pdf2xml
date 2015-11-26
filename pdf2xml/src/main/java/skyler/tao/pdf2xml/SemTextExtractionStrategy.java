@@ -1,5 +1,8 @@
 package skyler.tao.pdf2xml;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.parser.ImageRenderInfo;
 import com.itextpdf.text.pdf.parser.TextExtractionStrategy;
@@ -9,10 +12,11 @@ import com.itextpdf.text.pdf.parser.Vector;
 public class SemTextExtractionStrategy implements TextExtractionStrategy {
 
 	private StringBuilder result = new StringBuilder();
-	private String text;
+//	private String text;
 	private Vector lastBaseLine;
 	private String lastFont;
 	private float lastFontSize;
+	private LinkedList<HashMap<String, HashMap<String, Float>>> resultList;
 
 	private enum TextRenderMode {
 		FillText(1), 
@@ -38,7 +42,7 @@ public class SemTextExtractionStrategy implements TextExtractionStrategy {
 
 	public void renderText(TextRenderInfo renderInfo) {
 
-		String curFont = renderInfo.getFont().getPostscriptFontName();
+		String curFont = renderInfo.getFont().getPostscriptFontName();  //font name
 		// Check if faux bold is used
 		if ((renderInfo.getTextRenderMode() == TextRenderMode.FillThenStrokeText.getValue())) {
 			curFont += "-Bold";
@@ -48,10 +52,10 @@ public class SemTextExtractionStrategy implements TextExtractionStrategy {
 		// newline
 		Vector curBaseline = renderInfo.getBaseline().getStartPoint();
 		Vector topRight = renderInfo.getAscentLine().getEndPoint();
-		int llx = curBaseline.I1;
-		int lly = curBaseline.I2;
-		int urx = topRight.I1;
-		int ury = topRight.I2;
+		float llx = curBaseline.get(0);
+		float lly = curBaseline.get(1);
+		float urx = topRight.get(0);
+		float ury = topRight.get(1);
 		Rectangle rect = new Rectangle(llx, lly, urx, ury);
 		float curFontSize = rect.getHeight();
 
@@ -62,7 +66,7 @@ public class SemTextExtractionStrategy implements TextExtractionStrategy {
 				|| (curFontSize != lastFontSize) || (curFont != lastFont)) {
 			// if we've put down at least one span tag close it
 			if ((this.lastBaseLine != null)) {
-				this.result.append("</span>");
+				this.result.append("</span>\n");
 			}
 			// If the baseline has changed then insert a line break
 			if ((this.lastBaseLine != null)
@@ -71,7 +75,7 @@ public class SemTextExtractionStrategy implements TextExtractionStrategy {
 			}
 			// Create an HTML tag with appropriate styles
 			this.result.append(String.format(
-					"<span style=\"font-family:{0};font-size:{1}\">", curFont,
+					"<span style=\"font-family:{%s};font-size:{%f}\">", curFont,
 					curFontSize));
 		}
 

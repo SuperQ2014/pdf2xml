@@ -26,7 +26,7 @@ public class GetMetadataPdf {
 
 	public static void main(String[] args) throws IOException,
 			XMLStreamException {
-		PdfReader reader = new PdfReader("pdf_metadata.pdf");
+		PdfReader reader = new PdfReader("hello.pdf");
 
 		//获取metadata信息
 		Map<String, String> info = reader.getInfo();

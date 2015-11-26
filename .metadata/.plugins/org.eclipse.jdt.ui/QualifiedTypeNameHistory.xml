@@ -13,4 +13,6 @@
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.parser.TextExtractionStrategy"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.parser.Vector"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Rectangle"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

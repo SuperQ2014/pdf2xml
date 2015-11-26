@@ -22,6 +22,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/pdf2xml/pdf2xml_github/pdf2xml/jar/itext-4.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/pdf2xml/jar/itext-4.2.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

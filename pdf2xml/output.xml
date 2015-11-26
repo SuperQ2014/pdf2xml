@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><metadata>
-	<CreationDate>D:20151123100250+08'00'</CreationDate>
-	<Keywords>Metadata, iText, PDF</Keywords>
-	<Producer>iText® 5.5.6 ©2000-2015 iText Group NV (AGPL-version)</Producer>
-	<Author>Bruno Lowagie</Author>
-	<Title>Hello World example</Title>
-	<ModDate>D:20151123100250+08'00'</ModDate>
-	<Creator>My program using iText</Creator>
-	<Subject>This example shows how to add metadata</Subject>
+	<CreationDate>D:20151126092057+08'00'</CreationDate>
+	<Producer>Microsoft® Word 2010</Producer>
+	<Author>陶超强</Author>
+	<Creator>Microsoft® Word 2010</Creator>
+	<ModDate>D:20151126092057+08'00'</ModDate>
 </metadata>

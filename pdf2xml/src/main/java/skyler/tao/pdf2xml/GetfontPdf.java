@@ -13,7 +13,7 @@ import com.itextpdf.text.pdf.parser.RenderFilter;
 public class GetfontPdf {
 
 	public static void main(String[] args) throws IOException {
-	    String src = "test.pdf";
+	    String src = "字体.pdf";
 
 	    PdfReader reader = new PdfReader(src);
 
@@ -24,7 +24,10 @@ public class GetfontPdf {
 
 	    for (int i = 1; i <= reader.getNumberOfPages(); i++) {
 	        // strategy = new FilteredTextRenderListener(new LocationTextExtractionStrategy(), filter);
-	        System.out.println(PdfTextExtractor.getTextFromPage(reader, i, semTextExtractionStrategy));
+	    	String result = PdfTextExtractor.getTextFromPage(reader, i, semTextExtractionStrategy);
+	        System.out.println(result);
+	        
+	        
 	    }
 	}
 }
